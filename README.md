@@ -6,7 +6,7 @@ A dark-themed, animated personal portfolio website for a MERN Stack Developer. I
 
 ## Live Demo
 
-> Deploy to Vercel and update this link.
+> the-manik.vercel.app
 
 ---
 
