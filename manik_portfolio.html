@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manik — MERN Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <nav class="mobile-links">
+      <a href="#about" data-mobile-link>About</a>
+      <a href="#skills" data-mobile-link>Skills</a>
+      <a href="#education" data-mobile-link>Education</a>
+      <a href="#projects" data-mobile-link>Projects</a>
+      <a href="#contact" data-mobile-link>Contact</a>
+    </nav>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header id="navbar">
+    <a href="#" class="logo">Manik<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:manikkori697@gmail.com" class="btn-hire">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-glow"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" id="h-eyebrow">// Available for freelance</p>
+      <h1 class="hero-title" id="h-title">
+        MERN<br />
+        <span class="accent">STACK</span><br />
+        DEVELOPER
+      </h1>
+      <p class="hero-sub" id="h-sub">
+        Building fast, scalable full-stack web apps with MongoDB, Express,
+        React &amp; Node — from idea to live deployment.
+      </p>
+      <div class="hero-actions" id="h-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Let's Talk <span>→</span></a>
+      </div>
+      <div class="hero-stats" id="h-stats">
+        <div class="stat">
+          <span class="stat-num" data-count="20">0</span><sup>+</sup>
+          <p>Projects Built</p>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="100">0</span><sup>%</sup>
+          <p>Client Focus</p>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span><sup>+</sup>
+          <p>Years Learning</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo" id="h-photo">
+      <img id="heroCircle" src="./assets/img/hero2.jpeg" alt="Manik" />
+    </div>
+  </section>
+
+  <!-- ═══ MARQUEE ═══ -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span>MongoDB</span><span>Express.js</span><span>React</span><span>Node.js</span> <span>Tailwind
+        CSS</span><span>REST API</span><span>Vercel</span> <span>Git &amp; GitHub</span><span>JWT
+        Auth</span><span>Mongoose</span><span>Vite</span>
+      <!-- duplicate for seamless loop -->
+      <span>MongoDB</span><span>Express.js</span><span>React</span><span>Node.js</span> <span>Tailwind
+        CSS</span><span>REST API</span><span>Vercel</span> <span>Git &amp; GitHub</span><span>JWT
+        Auth</span><span>Mongoose</span><span>Vite</span>
+    </div>
+  </div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-left">
+        <p class="eyebrow reveal">// About Me</p>
+        <h2 class="section-title reveal">
+          Building web apps that work beautifully.
+        </h2>
+        <p class="body-text reveal">
+          I'm Manik, a MERN Stack Developer from India who loves turning ideas
+          into real, working products. Whether it's a gym booking platform, a
+          restaurant site, or a full SaaS dashboard — I build it clean, fast,
+          and fully functional.
+        </p>
+        <p class="body-text reveal">
+          I focus on decoupled
+          architecture, seamless UX, and making sure what I ship actually
+          solves the problem.
+        </p>
+        <div class="about-tags reveal">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span
+            class="tag">React</span><span class="tag">Tailwind</span><span class="tag">Express</span> <span
+            class="tag">Node.js</span><span class="tag">MongoDB</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Render</span><span class="tag">Vercel</span>
+          <span class="tag">c/c++</span><span class="tag">Java</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+      <div class="about-metrics">
+        <div class="metric-card reveal">
+          <div class="metric-num">20+</div>
+          <div class="metric-label">Projects Built</div>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-num">100%</div>
+          <div class="metric-label">Client Focus</div>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-num">5+</div>
+          <div class="metric-label">Full Stack Apps</div>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-num">∞</div>
+          <div class="metric-label">Curiosity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <p class="eyebrow reveal">// Skills</p>
+      <h2 class="section-title reveal">What I work with.</h2>
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-brands fa-react" style="color: rgb(57, 148, 200);"></i></div>
+          <h3 class="skill-name">React.js</h3>
+          <p class="skill-desc">
+            Component-based UIs, hooks, state management, SPA routing.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="88"></div>
+          </div>
+          <span class="skill-pct">85%</span>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-brands fa-node" style="color: green;"></i></div>
+          <h3 class="skill-name">Node.js &amp; Express</h3>
+          <p class="skill-desc">
+            RESTful APIs, middleware, authentication, file handling.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="82"></div>
+          </div>
+          <span class="skill-pct">85%</span>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="si si-mongodb" style="color: green;"></i></i></div>
+          <h3 class="skill-name">MongoDB</h3>
+          <p class="skill-desc">
+            Schema design, aggregation pipelines, Mongoose ODM.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="78"></div>
+          </div>
+          <span class="skill-pct">80%</span>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="si si-tailwindcss" style="color: rgb(27, 144, 195);"></i></div>
+          <h3 class="skill-name">Tailwind CSS</h3>
+          <p class="skill-desc">
+            Utility-first styling, responsive layouts, design systems.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+          <span class="skill-pct">90%</span>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-solid fa-brain" style="color: rgb(243, 143, 90);"></i></div>
+          <h3 class="skill-name">AI Integration</h3>
+          <p class="skill-desc">
+            OpenAI, Gemini &amp; Groq APIs, LLM integration, Prompt Engineering.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="72"></div>
+          </div>
+          <span class="skill-pct">70%</span>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-solid fa-cloud-arrow-up" style="color: rgb(172, 228, 226);"></i></div>
+          <h3 class="skill-name">Deployment</h3>
+          <p class="skill-desc">
+            Vercel, Render, GitHub — live production deploys.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="75"></div>
+          </div>
+          <span class="skill-pct">90%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education" class="education-section">
+    <div class="container">
+      <p class="eyebrow reveal">// Education</p>
+      <h2 class="section-title reveal">Where I learned. </h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-year">2026 — present</div>
+          <h3 class="edu-degree">Master of Computer Applications - MCA</h3>
+          <p class="edu-school">Dr. A. P. J. Abdul Kalam Technical University, Lucknow</p>
+          <span class="edu-badge current">Current</span>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-year">2023 — 2026</div>
+          <h3 class="edu-degree">Bachelor of Computer Applications - BCA</h3>
+          <p class="edu-school">Chaudhary Charan Singh University, Meerut</p>
+          <span class="edu-badge done">Completed</span>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-year">2022 — 2023</div>
+          <h3 class="edu-degree">Intermediate</h3>
+          <p class="edu-school">SSV inter college, Hapur</p>
+          <span class="edu-badge done">Completed</span>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-year">2020 — 2021</div>
+          <h3 class="edu-degree">High School</h3>
+          <p class="edu-school">SSV inter college, Hapur</p>
+          <span class="edu-badge done">Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <p class="eyebrow reveal">// Projects</p>
+          <h2 class="section-title reveal">Best Work</h2>
+        </div>
+        <span class="projects-year reveal">©2025</span>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card featured reveal">
+          <div class="project-thumb">
+            <a href="https://autoscriptai.vercel.app/" class="project-link-btn">↗</a>
+            <img src="./assets/img/autoscriptAI.png" alt="">
+            <span class="project-tag">Full Stack</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Autoscript.AI</h3>
+            <p class="project-desc">
+              Full MERN stack Scripting website with Login features, History management,
+              AI scripting, and modern landing page.
+            </p>
+            <div class="project-tech">
+              <span>React</span><span>Node.js</span><span>MongoDB</span><span>JWT</span><span>Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://tech-navigator.vercel.app/" class="project-link-btn">↗</a>
+            <span class="project-tag outline">Frontend</span>
+            <img src="./assets/img/technav.png" alt="">
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">TechNavigator(AI powered)</h3>
+            <p class="project-desc">
+              A smart assessment engine, over 40 tech roadmaps, and instant PDF exports. It integrates the Groq Llama-3
+              API to power a real-time AI Mentor for instant career counseling.
+
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Groq API(llama model)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://hospitaldemoweb.vercel.app/" class="project-link-btn">↗</a>
+            <span class="project-tag outline">Full Stack</span>
+            <img src="./assets/img/hospital.png" alt="">
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Hospital Management</h3>
+            <p class="project-desc">
+              A comprehensive healthcare portal designed to streamline patient appointments and improve medical service
+              accessibility.
+            </p>
+            <div class="project-tech">
+              <span>React</span><span>Tailwind</span><span>node.js</span><span>express.js</span><span>JWT</span><span>Mongoose(MongoDB)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <div class="cta-strip">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <p class="eyebrow reveal" style="text-align: center">
+        // Let's Build Together
+      </p>
+      <h2 class="cta-title reveal">DESIGNING WITH <span>PURPOSE.</span></h2>
+      <p class="cta-sub reveal">
+        From a simple landing page to a full-stack platform — I bring your
+        idea to life with clean code and sharp design.
+      </p>
+      <a href="#contact" class="btn-primary reveal">Schedule a Call →</a>
+    </div>
+  </div>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow reveal">// Contact</p>
+        <h2 class="section-title reveal">
+          Fill Out The Form To Get In Touch.
+        </h2>
+        <div class="contact-detail reveal">
+          <span class="cd-label">Email</span>
+          <span class="cd-val">manikkori697@email.com</span>
+        </div>
+        <div class="contact-detail reveal">
+          <span class="cd-label">Location</span>
+          <span class="cd-val">Hapur, India</span>
+        </div>
+        <div class="contact-detail reveal">
+          <span class="cd-label">Available For</span>
+          <span class="cd-val">Freelance · Full-time</span>
+        </div>
+        <div class="socials reveal">
+          <a href="https://github.com/manikkori" class="social-btn" title="GitHub">GH</a>
+          <a href="https://www.linkedin.com/in/manik-kori/" class="social-btn" title="LinkedIn">LI</a>
+          <a href="https://www.instagram.com/tech___savvy/" class="social-btn" title="Instagram">IG</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" name="first_name" class="form-input" placeholder="Kaif" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" name="last_name" class="form-input" placeholder="Dhobi" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" class="form-input" placeholder="kaif@example.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input type="text" name="user_subject" class="form-input" placeholder="Project Inquiry" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea name="message" class="form-textarea" placeholder="Tell me about your project..."
+            required></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">
+          Send Message →
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <span class="logo">Manik<span style="color: var(--orange)">.</span></span>
+        <p class="footer-tagline">
+          MERN Stack Developer building products that matter.
+        </p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Navigate</p>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Connect</p>
+        <ul>
+          <li><a href="https://github.com/manikkori">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/manik-kori/">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/tech___savvy/">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Work</p>
+        <ul>
+          <li><a href="#contact">Hire Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Freelance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p class="footer-copy">© 2025 Manik. All rights reserved.</p>
+      <p class="footer-copy"></p>
+    </div>
+    <div class="footer-wordmark">Manik</div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
