@@ -824,11 +824,12 @@ header.scrolled {
     position: relative;
     overflow: hidden;
 }
+
 .project-thumb img {
     width: 100%;
     height: 100%;
     /* object-fit: cover; */
-    
+
     /* transition: transform .4s var(--ease); */
 }
 
@@ -1259,55 +1260,65 @@ footer {
 
 @media (max-width: 640px) {
     .container {
-        padding: 0 1rem;
+        padding: 0 1.2rem;
     }
 
     header {
-        padding: 0 1rem;
+        padding: 0 1.2rem;
     }
 
+    /* ── TYPOGRAPHY & HERO FIXES ── */
     .hero-content {
         padding: calc(var(--nav-h) + 2rem) 1rem 2rem;
     }
 
     .hero-title {
-        font-size: clamp(1.8rem, 7.5vw, 2.8rem);
-        line-height: 1;
+        /* Mobile ke liye size thoda balance kiya */
+        font-size: clamp(2rem, 8vw, 2.6rem);
+        line-height: 1.1;
     }
 
     .hero-eyebrow {
-        font-size: .65rem;
-        margin-bottom: .8rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
     }
 
     .hero-sub {
-        font-size: .82rem;
-        line-height: 1.5;
+        font-size: 0.9rem;
+        /* Text bohot chhota na ho isliye increase kiya */
+        line-height: 1.6;
         margin-bottom: 1.6rem;
     }
 
+    .section-title {
+        font-size: clamp(1.8rem, 7vw, 2.2rem);
+    }
+
+    .body-text {
+        font-size: 0.9rem;
+        /* Readability improve ki */
+        line-height: 1.6;
+    }
+
+    /* ── BUTTONS & STATS ── */
     .hero-actions {
-        gap: .8rem;
+        gap: 1rem;
         flex-wrap: wrap;
     }
 
     .btn-primary,
     .btn-ghost {
-        font-size: .75rem;
-        padding: .6rem 1.2rem;
+        font-size: 0.8rem;
+        padding: 0.7rem 1.4rem;
     }
 
     .hero-stats {
-        gap: 1.2rem;
-        margin-top: 2.5rem;
+        gap: 1.5rem;
+        margin-top: 2rem;
     }
 
     .stat-num {
-        font-size: 1.4rem;
-    }
-
-    .stat p {
-        font-size: .6rem;
+        font-size: 1.6rem;
     }
 
     .hero-photo {
@@ -1316,121 +1327,114 @@ footer {
     }
 
     .hero-photo img {
-        max-width: 200px;
+        max-width: 220px;
     }
 
-    .section-title {
-        font-size: clamp(1.6rem, 5vw, 2.2rem);
+    /* ── PROJECT SHOWCASE MOBILE FIXES ── */
+    .projects-grid {
+        gap: 1.5rem;
     }
 
-    .eyebrow {
-        font-size: .6rem;
-        margin-bottom: .7rem;
+    .project-card:not(.featured) .project-thumb,
+    .project-thumb {
+        /* Mobile pe image ko thodi height di hai taaki details dikhein */
+        aspect-ratio: 16/10;
     }
 
-    .body-text {
-        font-size: .82rem;
-        line-height: 1.6;
+    .project-thumb-label {
+        /* Background ka bada text mobile pe chhota kiya */
+        font-size: 2rem;
     }
 
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-name {
+        font-size: 1.2rem;
+        /* Project title properly highlight hoga */
+        margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+        font-size: 0.88rem;
+        /* Padhne mein aasan */
+        margin-bottom: 1.2rem;
+    }
+
+    .project-tech span {
+        font-size: 0.7rem;
+        /* Tags ko properly size kiya */
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* ── OTHER SECTIONS FIXES ── */
     .about-metrics {
         grid-template-columns: 1fr 1fr;
-        gap: .8rem;
+        gap: 1rem;
     }
 
     .metric-card {
-        padding: 1.2rem;
-    }
-
-    .metric-num {
-        font-size: 1.8rem;
-    }
-
-    .metric-label {
-        font-size: .65rem;
+        padding: 1.5rem 1.2rem;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .skill-card {
-        padding: 1.4rem;
+        gap: 1.2rem;
     }
 
     .skill-name {
-        font-size: .95rem;
+        font-size: 1rem;
     }
 
     .skill-desc {
-        font-size: .72rem;
+        font-size: 0.85rem;
     }
 
     .edu-grid {
-        gap: .9rem;
+        gap: 1.2rem;
     }
 
     .edu-card {
-        padding: 1.4rem;
-    }
-
-    .edu-year {
-        font-size: .62rem;
+        padding: 1.5rem;
     }
 
     .edu-degree {
-        font-size: .95rem;
+        font-size: 1rem;
     }
 
     .edu-school {
-        font-size: .75rem;
+        font-size: 0.85rem;
     }
 
-    .projects-grid {
-        gap: 1rem;
-    }
-
-    .project-info {
-        padding: 1.2rem;
-    }
-
-    .project-name {
-        font-size: .95rem;
-    }
-
-    .project-desc {
-        font-size: .75rem;
-    }
-
+    /* ── FORMS & FOOTER ── */
     .form-row {
         grid-template-columns: 1fr;
-        gap: .8rem;
+        gap: 1rem;
     }
 
     .form-input,
     .form-textarea {
-        padding: .7rem .8rem;
-        font-size: .8rem;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
     }
 
     .footer-top {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .footer-wordmark {
-        font-size: 2.8rem;
+        font-size: 3rem;
         margin-top: 1rem;
     }
 
     .cta-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .cta-sub {
-        font-size: .8rem;
-        max-width: 100%;
+        font-size: 0.9rem;
     }
 }
 
