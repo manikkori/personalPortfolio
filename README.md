@@ -219,8 +219,8 @@ MIT — free to use, modify, and deploy.
 **Manik**
 MERN Stack Developer · India
 
-- GitHub: [github.com/yourhandle](https://github.com/manikkori)
-- LinkedIn: [linkedin.com/in/yourhandle](https://linkedin.com/in/manik-kori)
+- GitHub: [github.com/manikkori](https://github.com/manikkori)
+- LinkedIn: [linkedin.com/in/manik-kori](https://linkedin.com/in/manik-kori)
 
 ---
 
