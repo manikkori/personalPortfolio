@@ -1511,7 +1511,7 @@ footer {
 
     .hero-photo img:hover,
     .hero-photo img:active {
-        filter: grayscale(20%) contrast(110%) brightness(100%);
+        filter: contrast(10);
     }
 
     /* ── PROJECT SHOWCASE MOBILE FIXES ── */
