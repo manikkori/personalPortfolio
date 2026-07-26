@@ -1425,13 +1425,6 @@ footer {
 }
 
 @media (max-width: 640px) {
-    .hero {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        min-height: 100svh;
-        align-items: center;
-    }
-
     .container {
         padding: 0 1.2rem;
     }
@@ -1442,13 +1435,13 @@ footer {
 
     /* ── TYPOGRAPHY & HERO FIXES ── */
     .hero-content {
-        padding: calc(var(--nav-h) + 2rem) .8rem 2rem 1rem;
+        padding: calc(var(--nav-h) + 2rem) 1rem 2rem;
     }
 
     .hero-title {
         /* Mobile ke liye size thoda balance kiya */
-        font-size: clamp(1.5rem, 5.5vw, 2rem);
-        line-height: .95;
+        font-size: clamp(2rem, 8vw, 2.6rem);
+        line-height: 1.1;
     }
 
     .hero-eyebrow {
@@ -1457,9 +1450,10 @@ footer {
     }
 
     .hero-sub {
-        display: none;
-        font-size: .72rem;
+        font-size: 0.9rem;
         /* Text bohot chhota na ho isliye increase kiya */
+        line-height: 1.6;
+        margin-bottom: 1.6rem;
     }
 
     .section-title {
@@ -1474,49 +1468,61 @@ footer {
 
     /* ── BUTTONS & STATS ── */
     .hero-actions {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: .6rem;
+        gap: 1rem;
+        flex-wrap: wrap;
     }
 
     .btn-primary,
     .btn-ghost {
-        font-size: .7rem;
-        padding: .55rem 1rem;
+        font-size: 0.8rem;
+        padding: 0.7rem 1.4rem;
     }
 
     .hero-stats {
-        flex-direction: column;
-        gap: .8rem;
-        margin-top: 1.2rem;
+        gap: 1.5rem;
+        margin-top: 2rem;
     }
 
     .stat-num {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     .hero-photo {
-        height: 100svh;
-        min-height: 0;
-        max-height: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: var(--nav-h) .8rem 2rem 0;
+        max-height: 320px;
+        padding: 1rem;
     }
 
     .hero-photo img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 4;
-        object-fit: cover;
-        border-top-right-radius: 20px;
+        max-width: 220px;
     }
 
     /* ── PROJECT SHOWCASE MOBILE FIXES ── */
     .projects-grid {
         gap: 1.5rem;
+    }
+
+    .project-card.featured {
+        display: block;
+        grid-column: 1;
+    }
+
+    .project-card.featured .project-thumb {
+        display: none;
+    }
+
+    .project-card.featured .project-info {
+        min-height: 0;
+        padding: 1.8rem 1.4rem;
+    }
+
+    .project-card.featured .project-name {
+        font-size: clamp(1.35rem, 7vw, 1.7rem);
+    }
+
+    .project-card.featured .project-number {
+        top: .45rem;
+        right: .7rem;
+        font-size: 5rem;
     }
 
     .project-card:not(.featured) .project-thumb,
