@@ -1509,7 +1509,10 @@ footer {
         filter: grayscale(20%) contrast(110%) brightness(100%);
     }
 
-    .hero-photo img:hover,
+    .hero-photo img:hover {
+        filter: grayscale(20%) contrast(110%) brightness(100%);
+    }
+
     .hero-photo img:active {
         filter: contrast(10);
     }
