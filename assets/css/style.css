@@ -1506,6 +1506,12 @@ footer {
         height: clamp(180px, 56vw, 300px);
         object-fit: cover;
         aspect-ratio: 16 / 9;
+        filter: grayscale(20%) contrast(110%) brightness(100%);
+    }
+
+    .hero-photo img:hover,
+    .hero-photo img:active {
+        filter: grayscale(20%) contrast(110%) brightness(100%);
     }
 
     /* ── PROJECT SHOWCASE MOBILE FIXES ── */
