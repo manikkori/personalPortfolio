@@ -9,49 +9,52 @@ gsap.registerPlugin(ScrollTrigger);
 ───────────────────────────── */
 const cursor = document.getElementById("cursor");
 const cursorRing = document.getElementById("cursorRing");
-let mouseX = 0,
-  mouseY = 0;
-let ringX = 0,
-  ringY = 0;
 
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX + "px";
-  cursor.style.top = mouseY + "px";
-});
+if (window.matchMedia("(pointer: fine)").matches) {
+  let mouseX = 0,
+    mouseY = 0;
+  let ringX = 0,
+    ringY = 0;
 
-(function tickRing() {
-  ringX += (mouseX - ringX) * 0.1;
-  ringY += (mouseY - ringY) * 0.1;
-  cursorRing.style.left = ringX + "px";
-  cursorRing.style.top = ringY + "px";
-  requestAnimationFrame(tickRing);
-})();
-
-/* hover expansion */
-document
-  .querySelectorAll(
-    "a, button, .skill-card, .project-card, .metric-card, .edu-card, .tag",
-  )
-  .forEach((el) => {
-    el.addEventListener("mouseenter", () =>
-      document.body.classList.add("cursor-hover"),
-    );
-    el.addEventListener("mouseleave", () =>
-      document.body.classList.remove("cursor-hover"),
-    );
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + "px";
+    cursor.style.top = mouseY + "px";
   });
 
-/* hide cursor when it leaves window */
-document.addEventListener("mouseleave", () => {
-  cursor.style.opacity = "0";
-  cursorRing.style.opacity = "0";
-});
-document.addEventListener("mouseenter", () => {
-  cursor.style.opacity = "1";
-  cursorRing.style.opacity = "1";
-});
+  (function tickRing() {
+    ringX += (mouseX - ringX) * 0.1;
+    ringY += (mouseY - ringY) * 0.1;
+    cursorRing.style.left = ringX + "px";
+    cursorRing.style.top = ringY + "px";
+    requestAnimationFrame(tickRing);
+  })();
+
+  /* hover expansion */
+  document
+    .querySelectorAll(
+      "a, button, .skill-card, .project-card, .metric-card, .edu-card, .tag",
+    )
+    .forEach((el) => {
+      el.addEventListener("mouseenter", () =>
+        document.body.classList.add("cursor-hover"),
+      );
+      el.addEventListener("mouseleave", () =>
+        document.body.classList.remove("cursor-hover"),
+      );
+    });
+
+  /* hide cursor when it leaves window */
+  document.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "0";
+    cursorRing.style.opacity = "0";
+  });
+  document.addEventListener("mouseenter", () => {
+    cursor.style.opacity = "1";
+    cursorRing.style.opacity = "1";
+  });
+}
 
 /* ─────────────────────────────
    NAVBAR SCROLL BEHAVIOUR

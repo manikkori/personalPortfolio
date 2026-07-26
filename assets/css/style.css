@@ -399,6 +399,12 @@ header.scrolled {
     /* border-left: 2px solid var(--border); */
 }
 
+.hero-photo picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .hero-photo img {
     width: 100%;
     max-width: 420px;
@@ -1488,12 +1494,18 @@ footer {
     }
 
     .hero-photo {
-        max-height: 320px;
-        padding: 1rem;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        padding: 1rem 1rem 2.5rem;
     }
 
     .hero-photo img {
-        max-width: 220px;
+        width: 100%;
+        max-width: 520px;
+        height: clamp(180px, 56vw, 300px);
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
     }
 
     /* ── PROJECT SHOWCASE MOBILE FIXES ── */
@@ -1625,6 +1637,21 @@ footer {
 
     .cta-sub {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 640px), (pointer: coarse) {
+
+    body,
+    body *,
+    body *::before,
+    body *::after {
+        cursor: auto !important;
+    }
+
+    .cursor,
+    .cursor-ring {
+        display: none !important;
     }
 }
 
