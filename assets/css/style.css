@@ -1513,9 +1513,9 @@ footer {
         filter: grayscale(20%) contrast(110%) brightness(100%);
     }
 
-    /* .hero-photo img:active {
+    .hero-photo img:active {
         filter: contrast(10);
-    } */
+    }
 
     /* ── PROJECT SHOWCASE MOBILE FIXES ── */
     .projects-grid {
