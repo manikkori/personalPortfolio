@@ -2,7 +2,7 @@
 
 > MERN Stack Developer portfolio built with vanilla HTML, CSS & JavaScript + GSAP animations.
 
-![Portfolio Preview](./assets/img/hero2.jpeg)
+![Portfolio Preview](./assets/img/preview.png)
 
 ---
 
