@@ -25,7 +25,7 @@
   panel.innerHTML = `
     <div class="chat-header">
       <h3>Ask about Manik</h3>
-      <p>AI Assistant · Powered by <span>Groq</span></p>
+      <p>Manik's AI Assistant</p>
     </div>
     <div class="chat-messages" id="chatMessages"></div>
     <div class="chat-quick-replies" id="chatChips"></div>
