@@ -22,15 +22,15 @@ SKILLS:
 - Deployment: Vercel, Render, GitHub
 - Other languages: C/C++, Java, Python
 
-FEATURED PROJECTS:
+FEATURED PROJECTS:  
 1. Concept Dependency Debugger (CDD) — A full-stack EdTech platform utilizing LLMs and dynamic knowledge graphs to trace the exact prerequisite failures behind a user's incorrect answers. Transforms standard quiz assessments into personalized, root-cause concept remediation. Built with React, Tailwind CSS, Node.js, Express, Groq API (OpenAI model), React Flow, and Knowledge Graphs. Live at cdd-openai.vercel.app
 
 2. TechNavigator (AI Powered) — A smart assessment engine with 40+ tech career roadmaps and instant PDF exports. Integrates Groq's Llama-3 API to power a real-time AI Mentor for career counseling. Built with HTML, CSS, JavaScript, Groq API. Live at tech-navigator.vercel.app
 
 3. Real-time Communication App — A full-stack real-time collaboration engine using the MERN stack, featuring peer-to-peer (P2P) WebRTC video mesh topology, sub-second latency Socket.io instant messaging, and a synchronized bidirectional HTML5 canvas whiteboard. Built with React, Tailwind, Node.js, Express.js, WebRTC, Socket.io, Mongoose (MongoDB). Live at rtcapp.vercel.app
 
-Manik has built 20+ projects total, including a birthday-surprise gift website (scroll-driven cinematic experience with GSAP + Framer Motion), a cafe/restaurant website with MERN backend, an e-commerce gaming store (NEXUS Gaming Store) with cart/checkout flow, and various client freelance projects.
-
+Manik has built 20+ projects total.
+Note: The portfolio site itself only lists 3 featured projects (shown above), but Manik has built many more. During his CodeAlpha internship, he built 3 projects: a social media platform, an e-commerce platform, and one more project. He's also independently built several self-initiated projects including a gym booking/management website and a cafe/restaurant website. He's built 20+ projects total across internships, freelance client work, and personal practice.
 STATS:
 - 20+ Projects Built
 - 100% Client Focus
