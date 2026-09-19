@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owner Dashboard — Manik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/owner.css" />
+</head>
+
+<body>
+  <!-- PASSWORD OVERLAY -->
+  <div id="authOverlay" class="auth-overlay">
+    <div class="auth-card">
+      <h2 class="auth-title">Admin Access</h2>
+      <p class="auth-sub">Enter owner password to continue.</p>
+      <input type="password" id="adminPassword" class="auth-input" placeholder="••••••••" />
+      <button id="loginBtn" class="btn-primary" style="width: 100%; border-radius: 3px; margin-top: 1rem;">Login</button>
+      <p id="authError" class="auth-error"></p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD (Hidden by default) -->
+  <div id="dashboardContainer" class="dashboard-container" style="display: none;">
+    <header class="dashboard-header">
+      <a href="/" class="logo">Manik<span>.</span> Dashboard</a>
+      <div style="display: flex; gap: 1rem;">
+        <button id="exportBtn" class="btn-primary" style="background: var(--amber); color: #000; border: none; padding: 0.5rem 1rem;">Export config.json</button>
+        <button id="logoutBtn" class="btn-ghost">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </div>
+    </header>
+
+    <div class="container dashboard-main">
+      <div class="dash-sidebar">
+        <button class="dash-tab active" data-target="profileTab"><i class="fa-solid fa-user"></i> Profile Photo</button>
+        <button class="dash-tab" data-target="skillsTab"><i class="fa-solid fa-code"></i> Skills</button>
+        <button class="dash-tab" data-target="projectsTab"><i class="fa-solid fa-briefcase"></i> Projects</button>
+        
+        <div style="margin-top: auto; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; font-size: 0.75rem; color: var(--muted); line-height: 1.5;">
+          <strong>Note on Frontend-Only DB:</strong>
+          <br/>Changes made here are saved to your browser's local storage to instantly preview them. To make changes permanent for everyone, click <strong>"Export config.json"</strong> and commit that file to your GitHub repository.
+        </div>
+      </div>
+
+      <div class="dash-content">
+        <!-- PROFILE TAB -->
+        <div id="profileTab" class="dash-panel active">
+          <h2 class="panel-title">Update Profile Photo</h2>
+          <div class="form-group">
+            <label class="form-label">Photo URL</label>
+            <input type="text" id="photoUrl" class="form-input" placeholder="./assets/img/hero_b_w.jpg" />
+          </div>
+          <button class="btn-primary" id="savePhotoBtn">Save Photo</button>
+          <div class="preview-area">
+            <img id="photoPreview" src="./assets/img/hero_b_w.jpg" alt="Preview" class="photo-preview" />
+          </div>
+        </div>
+
+        <!-- SKILLS TAB -->
+        <div id="skillsTab" class="dash-panel">
+          <h2 class="panel-title">Manage Skills</h2>
+          <div class="add-new-box">
+            <h3>Add New Skill</h3>
+            <div class="form-group">
+              <label class="form-label">Skill Name</label>
+              <input type="text" id="skillName" class="form-input" placeholder="e.g. Next.js" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <input type="text" id="skillDesc" class="form-input" placeholder="Short description..." />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Icon Class</label>
+              <input type="text" id="skillIcon" class="form-input" placeholder="e.g. fa-brands fa-react" />
+            </div>
+            <button class="btn-primary" id="addSkillBtn">Add Skill</button>
+          </div>
+          <div class="list-area" id="skillsList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- PROJECTS TAB -->
+        <div id="projectsTab" class="dash-panel">
+          <h2 class="panel-title">Manage Projects</h2>
+          <div class="add-new-box">
+            <h3>Add New Project</h3>
+            <div class="form-group">
+              <label class="form-label">Project Name</label>
+              <input type="text" id="projName" class="form-input" placeholder="e.g. TechNavigator" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <textarea id="projDesc" class="form-textarea" placeholder="Project details..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Image URL</label>
+              <input type="text" id="projImage" class="form-input" placeholder="./assets/img/project.png" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Live Link</label>
+              <input type="text" id="projLink" class="form-input" placeholder="https://..." />
+            </div>
+            <button class="btn-primary" id="addProjBtn">Add Project</button>
+          </div>
+          <div class="list-area" id="projectsList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/owner.js"></script>
+</body>
+</html>
