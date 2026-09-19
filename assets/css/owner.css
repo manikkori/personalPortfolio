@@ -270,15 +270,63 @@ body {
 }
 
 @media (max-width: 768px) {
+  .dashboard-header {
+    padding: 0 1rem;
+    flex-direction: column;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+  }
+  
   .dashboard-main {
     grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
   }
+  
   .dash-sidebar {
     flex-direction: row;
     overflow-x: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    gap: 0.5rem;
+    /* Hide scrollbar for a cleaner look but keep it scrollable */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
+  .dash-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
   .dash-tab {
     white-space: nowrap;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .add-new-box {
+    padding: 1.2rem;
+  }
+  
+  .list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  
+  .btn-danger {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .auth-card {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .panel-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
   }
 }
