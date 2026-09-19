@@ -1673,3 +1673,44 @@ footer {
         transition-duration: .01ms !important;
     }
 }
+
+/* ═══════════════════════════════════════════
+   GITHUB SNAKE ANIMATION
+   ═══════════════════════════════════════════ */
+.github-snake-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.snake-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange) transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+.snake-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+.snake-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+.snake-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border-radius: 10px;
+}
+
+.github-snake {
+    max-width: 100%;
+    min-width: 800px;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: var(--card);
+    display: block;
+    margin: 0 auto;
+}
