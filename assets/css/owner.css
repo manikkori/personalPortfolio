@@ -1,11 +1,27 @@
 /* owner.css - Dashboard styling matching main theme */
 
+body, * {
+  cursor: auto !important;
+}
+
 body {
   background: var(--black);
   color: var(--white);
   font-family: var(--font-body);
   margin: 0;
   padding: 0;
+}
+
+/* Override global fixed header */
+.dashboard-header {
+  height: var(--nav-h);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--card);
+  position: static !important;
 }
 
 /* Authentication Overlay */
