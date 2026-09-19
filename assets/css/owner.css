@@ -1,0 +1,268 @@
+/* owner.css - Dashboard styling matching main theme */
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+}
+
+/* Authentication Overlay */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--orange);
+  margin-bottom: 0.5rem;
+}
+
+.auth-sub {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.auth-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  color: var(--white);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+}
+.auth-input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.auth-error {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  height: 1rem;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  height: var(--nav-h);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--card);
+}
+
+.dashboard-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.dash-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dash-tab {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  text-align: left;
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.dash-tab:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--white);
+}
+
+.dash-tab.active {
+  background: var(--card2);
+  border-color: var(--border);
+  color: var(--orange);
+}
+
+/* Panels */
+.dash-panel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+.dash-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panel-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.add-new-box {
+  background: var(--card);
+  border: 1px dashed var(--border);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.add-new-box h3 {
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+/* Forms inside dashboard */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.form-input, .form-textarea {
+  width: 100%;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  color: var(--white);
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+/* Lists */
+.list-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-content h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--orange);
+  margin-bottom: 0.3rem;
+}
+.list-item-content p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-danger:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Photo Preview */
+.preview-area {
+  margin-top: 2rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border);
+}
+.photo-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    grid-template-columns: 1fr;
+  }
+  .dash-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  .dash-tab {
+    white-space: nowrap;
+  }
+}
