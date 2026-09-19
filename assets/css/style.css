@@ -1714,3 +1714,29 @@ footer {
     display: block;
     margin: 0 auto;
 }
+
+.stats-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.github-stats {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 3px;
+    background: var(--card);
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
